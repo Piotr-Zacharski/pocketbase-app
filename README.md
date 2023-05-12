@@ -1,4 +1,5 @@
 # Ract App with PocketBase backend
+### The main purpose of this app is to keep scores of played board games with user authentication
 
 ## This project was bootstrapped with: 
 * ✅ [Create React App](https://github.com/facebook/create-react-app) 
