@@ -1,6 +1,6 @@
 # Ract App with PocketBase backend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [PocketBase](https://pocketbase.io/).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), [PocketBase](https://pocketbase.io/), [React Hook Form](https://react-hook-form.com/) and [MUI5](https://mui.com/material-ui/migration/migration-v4/).
 
 ## Available Scripts
 
