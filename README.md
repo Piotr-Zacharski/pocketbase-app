@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Ract App with PocketBase backend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [PocketBase](https://pocketbase.io/).
 
 ## Available Scripts
 
