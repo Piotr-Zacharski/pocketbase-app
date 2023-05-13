@@ -5,7 +5,8 @@ The main purpose of this app is to store results of finished board games' gamepl
 * ✅ [Create React App](https://github.com/facebook/create-react-app) 
 * ✅ [PocketBase](https://pocketbase.io/) 
 * ✅ [React Hook Form](https://react-hook-form.com/)
-* ✅ [MUI5](https://mui.com/material-ui/migration/migration-v4/).
+* ✅ [MUI5](https://mui.com/material-ui/migration/migration-v4/)
+* ✅ [TailwindCSS](https://tailwindcss.com/)
 
 ## Available Scripts
 
