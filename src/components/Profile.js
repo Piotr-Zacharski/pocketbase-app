@@ -1,67 +1,73 @@
-// import React, {useState, useEffect} from 'react'
-//
-// import {useNavigate, Link} from 'react-router-dom'
-//
-//
-//
-// function Profile() {
-//     // const navigate = useNavigate()
-//     //
-//     // const [userDetails, setUserDetails] = useState()
-//     //
-//     // useEffect(() => {
-//     //     const getData = account.get()
-//     //     getData.then(
-//     //         function(response){
-//     //             setUserDetails(response)
-//     //             //console.log(userDetails);
-//     //         },
-//     //         function(error){
-//     //             console.log(error);
-//     //         }
-//     //     )
-//     // }, [])
-//     //
-//     // const handleLogout = async () => {
-//     //     try {
-//     //         await account.deleteSession("current")
-//     //         navigate("/")
-//     //     } catch (error) {
-//     //         console.log(error);
-//     //     }
-//     // }
-//
-//
-//     return (
-//         <>
-//             {/*{userDetails ? (*/}
-//                 <>
-//                     <div className="min-h-min max-w-7xl mx-auto shadow-md flex justify-between text-right py-3 px-3 mt-2 rounded-md">
-//                         <div>
-//                             {/*<p className="text-xl">Hello {userDetails.name}</p>*/}
-//                         </div>
-//                         <div>
-//                             <button
-//                                 className="bg-red-400 text-white p-1 rounded-md"
-//                                 // onClick={handleLogout}
-//                             >
-//                                 Logout
-//                             </button>
-//                         </div>
-//                     </div>
-//                 </>
-//             ) : (
-//                 <p className="mt-4">
-//                     Please Login To see Profile{" "}
-//                     <Link to="/">
-//             <span className="bg-blue-300 p-2 cursor-pointer text-white rounded-md">
-//               Login
-//             </span>
-//                     </Link>
-//                 </p>
-//             )}
-//         </>
-//     )
-// }
-//
-// export default Profile
+import {Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow} from "./ui/table";
+
+
+const invoices = [
+    {
+        invoice: "INV001",
+        paymentStatus: "Paid",
+        totalAmount: "$250.00",
+        paymentMethod: "Credit Card",
+    },
+    {
+        invoice: "INV002",
+        paymentStatus: "Pending",
+        totalAmount: "$150.00",
+        paymentMethod: "PayPal",
+    },
+    {
+        invoice: "INV003",
+        paymentStatus: "Unpaid",
+        totalAmount: "$350.00",
+        paymentMethod: "Bank Transfer",
+    },
+    {
+        invoice: "INV004",
+        paymentStatus: "Paid",
+        totalAmount: "$450.00",
+        paymentMethod: "Credit Card",
+    },
+    {
+        invoice: "INV005",
+        paymentStatus: "Paid",
+        totalAmount: "$550.00",
+        paymentMethod: "PayPal",
+    },
+    {
+        invoice: "INV006",
+        paymentStatus: "Pending",
+        totalAmount: "$200.00",
+        paymentMethod: "Bank Transfer",
+    },
+    {
+        invoice: "INV007",
+        paymentStatus: "Unpaid",
+        totalAmount: "$300.00",
+        paymentMethod: "Credit Card",
+    },
+]
+
+export function Profile() {
+    return (
+        <Table>
+            <TableCaption>A list of players.</TableCaption>
+            <TableHeader>
+                <TableRow>
+                    <TableHead className="w-[100px]">Invoice</TableHead>
+                    <TableHead>Status</TableHead>
+                    <TableHead>Method</TableHead>
+                    <TableHead className="text-right">Amount</TableHead>
+                </TableRow>
+            </TableHeader>
+            <TableBody>
+                {invoices.map((invoice) => (
+                    <TableRow key={invoice.invoice}>
+                        <TableCell className="font-medium">{invoice.invoice}</TableCell>
+                        <TableCell>{invoice.paymentStatus}</TableCell>
+                        <TableCell>{invoice.paymentMethod}</TableCell>
+                        <TableCell className="text-right">{invoice.totalAmount}</TableCell>
+                    </TableRow>
+                ))}
+            </TableBody>
+        </Table>
+    )
+}
