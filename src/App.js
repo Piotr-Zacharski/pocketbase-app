@@ -1,10 +1,16 @@
-import Auth from "Auth";
+import Login from "components/Login";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+
 
 function App() {
   return (
-    <div style={{ margin: "0 auto", width: "100%" }}>
-      <Auth />
-    </div>
+      <BrowserRouter>
+          <Routes>
+              <Route path='/' element={<Login/>}/>
+              {/*<Route path='/signup' element={<Signup/>}/>*/}
+              {/*<Route path='/profile' element={<Profile/>}/>*/}
+          </Routes>
+      </BrowserRouter>
   );
 }
 
